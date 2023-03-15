@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name" translatable="false">计时与打卡</string>
+    <integer name="animal_left_right_time">300</integer>
+    <integer name="animal_top_bottom_time">200</integer>
+    <string name="line_delete" translatable="false"><strike>8</strike></string>
+    <string name="user_agreement" translatable="false">《用户协议》</string>
+    <string name="privacy_policy" translatable="false">《隐私政策》</string>
+    <string name="user_agreement_and_privacy_policy_introduction" translatable="false">
+        &#160;&#160;请您务必慎重阅读、充分理解\"用户协议\"和\"隐私政策\"各条款,包括但不限于：为了向您提供内容存储和账号登录等服务 我们需要收集您的设备信息、操作日志等个人信息\n
+        &#160;&#160;您可阅读《用户协议》和《隐私政策》了解详细信息。如果您同意，请点击同意按钮，以开始接受我们的服务
+    </string>
+
+    <string name="text_count_down_limit" translatable="false">最多仅允许创建 %d 个计时。购买会员后，可解除该限制。</string>
+    <string name="text_sign_in_limit" translatable="false">最多仅允许创建 %d 个打卡任务。购买会员后，可解除该限制。</string>
+    <string name="text_need_pro_feature" translatable="false">该功能需要会员服务。购买会员后，可解除该限制。</string>
+</resources>

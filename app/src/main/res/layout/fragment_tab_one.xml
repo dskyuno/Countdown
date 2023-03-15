@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/list_countdown"
+            app:layout_constraintTop_toBottomOf="@+id/ll_current_top_count_down" />
+
+    </FrameLayout>
+</layout>-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_current_top_count_down"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_white_with_window_bg_selector"
+        android:paddingStart="20dp"
+        android:visibility="gone"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星期六还有"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_top_targetTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目标日：2022-5-14 星期六" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <com.project.librarycountdown.countdownview.CountdownView
+                android:id="@+id/cv_top_interval_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="visible"
+                app:isShowDay="true"
+                app:isShowHour="false"
+                app:isShowMillisecond="false"
+                app:isShowMinute="false"
+                app:isShowSecond="false"
+                app:isTimeTextBold="true"
+                app:suffixDay="天"
+                app:suffixGravity="bottom"
+                app:suffixHour="小时"
+                app:suffixMillisecond="毫秒"
+                app:suffixMinute="分钟"
+                app:suffixSecond="秒"
+                app:suffixTextColor="#000000"
+                app:suffixTextSize="0sp"
+                app:timeTextColor="#000000"
+                app:timeTextSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_day_or_hour"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Days"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_current_top_count_down"
+        app:spanCount="2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_add"
+        app:tint="#A0A0A0"
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="浮动"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

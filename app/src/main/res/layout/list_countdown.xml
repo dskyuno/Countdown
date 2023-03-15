@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_item"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_white_with_window_bg_selector_radius"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/tv_countdown_type"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@color/countdown_type_urgency"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_countdown_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:id="@+id/tv_countdown_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:gravity="center_vertical"
+        android:text="星期六还有"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cv_interval_time" />
+
+    <com.project.librarycountdown.countdownview.CountdownView
+        android:id="@+id/cv_interval_time"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+
+        android:background="#F4F9FD"
+        app:isShowDay="true"
+        app:isShowHour="false"
+        app:isShowMillisecond="false"
+        app:isShowMinute="false"
+        app:isShowSecond="false"
+        app:isTimeTextBold="false"
+        app:layout_constraintRight_toLeftOf="@id/tv_day_or_hour"
+        app:suffixDay="天"
+        app:suffixGravity="center"
+        app:suffixHour="小时"
+        app:suffixMillisecond="毫秒"
+        app:suffixMinute="分钟"
+        app:suffixSecond="秒"
+        app:suffixTextColor="#000000"
+        app:suffixTextSize="0sp"
+        app:timeTextColor="#000000"
+        app:timeTextSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_day_or_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/cv_interval_time"
+        android:background="#b9d7f9"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="天"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

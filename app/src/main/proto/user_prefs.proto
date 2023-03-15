@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "com.project.timemanagerment";
+option java_multiple_files = true;
+
+message UserPreferences{
+  string account = 1;
+  string email = 2;
+  string nickname = 3;
+  int32 sex = 4;
+  int64 expireTime = 5;
+}

@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+
+    }
+}
+enableFeaturePreview("VERSION_CATALOGS")
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {url 'https://bintray.com/wechat-sdk-team/maven'}
+
+    }
+
+    versionCatalogs {
+        libs {
+            from(files("gradle/libs.toml"))
+        }
+    }
+ /*   versionCatalogs {
+        libs {
+            alias('groovy-core').to('org.codehaus.groovy:groovy:3.0.5')
+            alias('groovy-json').to('org.codehaus.groovy:groovy-json:3.0.5')
+            alias('groovy-nio').to('org.codehaus.groovy:groovy-nio:3.0.5')
+            alias('commons-lang3').to('org.apache.commons', 'commons-lang3').version {
+                strictly '[3.8, 4.0['
+                prefer '3.9'
+            }
+        }
+    }*/
+}
+rootProject.name = "BaseProjectArch"
+include ':app'
+include ':librarycountdown'
+include ':librarycalendarview'

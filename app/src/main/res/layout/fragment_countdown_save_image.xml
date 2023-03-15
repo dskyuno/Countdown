@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="存为图片"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/minToolbarTitle"
+        app:titleTextColor="#707070" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cl_save_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_with_radius"
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="倒计时"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="#f8e0b0"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/cl_countdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="星期六还有"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.project.librarycountdown.countdownview.CountdownView
+                    android:id="@+id/cv_interval_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="162dp"
+                    android:background="#f8e8c0"
+                    app:isShowDay="true"
+                    app:isShowHour="false"
+                    app:isShowMillisecond="false"
+                    app:isShowMinute="false"
+                    app:isShowSecond="false"
+                    app:isTimeTextBold="false"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    app:suffixDay="天"
+                    app:suffixGravity="bottom"
+                    app:suffixHour="小时"
+                    app:suffixMillisecond="毫秒"
+                    app:suffixMinute="分钟"
+                    app:suffixSecond="秒"
+                    app:suffixTextColor="#000000"
+                    app:suffixTextSize="14sp"
+                    app:timeTextColor="#000000"
+                    app:timeTextSize="74sp" />
+
+                <TextView
+                    android:id="@+id/tv_target_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="#F7F6F4"
+                    android:gravity="center"
+                    android:text="目标日：2022-05-21 星期六"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_interval_time" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F7F6F4"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:text="纪念日"
+                    android:textColor="#A0A0A0"
+                    app:layout_constraintTop_toBottomOf="@id/tv_target_time" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--   <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/cl_countdown"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="30dp"
+               android:layout_marginTop="64dp"
+               android:layout_marginRight="30dp"
+               android:layout_marginBottom="50dp"
+               android:background="#f8e0b0"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintRight_toLeftOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+               <TextView
+                   android:id="@+id/tv_title"
+                   android:layout_width="match_parent"
+                   android:layout_height="54dp"
+                   android:fontFamily="sans-serif"
+                   android:gravity="center"
+                   android:text="星期六还有"
+                   android:textSize="18sp"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <com.project.librarycountdown.countdownview.CountdownView
+                   android:id="@+id/cv_interval_time"
+                   android:layout_width="match_parent"
+                   android:layout_height="162dp"
+                   android:background="#f8e8c0"
+                   app:isShowDay="true"
+                   app:isShowHour="false"
+                   app:isShowMillisecond="false"
+                   app:isShowMinute="false"
+                   app:isShowSecond="false"
+                   app:isTimeTextBold="false"
+                   app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                   app:suffixDay="天"
+                   app:suffixGravity="bottom"
+                   app:suffixHour="小时"
+                   app:suffixMillisecond="毫秒"
+                   app:suffixMinute="分钟"
+                   app:suffixSecond="秒"
+                   app:suffixTextColor="#000000"
+                   app:suffixTextSize="14sp"
+                   app:timeTextColor="#000000"
+                   app:timeTextSize="74sp" />
+
+               <TextView
+                   android:id="@+id/tv_target_time"
+                   android:layout_width="match_parent"
+                   android:layout_height="54dp"
+                   android:background="#F7F6F4"
+                   android:gravity="center"
+                   android:text="目标日：2022-05-21 星期六"
+                   app:layout_constraintTop_toBottomOf="@+id/cv_interval_time" />
+
+               <TextView
+                   android:id="@+id/tv_introduction"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="#F7F6F4"
+                   android:gravity="center"
+                   android:maxLines="1"
+                   android:paddingBottom="5dp"
+                   android:text="纪念日"
+                   android:textColor="#A0A0A0"
+                   app:layout_constraintTop_toBottomOf="@id/tv_target_time" />
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+   -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_circle_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="管理时间.Countdown" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cl_share_or_save_parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_save_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_back_ground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_select_theme"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:text="选择主题"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_select_theme"
+                tools:listitem="@layout/list_countdown_theme" />
+
+            <TextView
+                android:id="@+id/tv_select_typeface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="选择字体"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_theme" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_select_typeface"
+                tools:listitem="@layout/list_text_typeface" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_share_or_save_parent"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginBottom="15dp"
+
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_share_and_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_save_main_share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_white_with_window_bg_selector_with_big_radius"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_save" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_share_main_share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_green_with_window_bg_selector_with_radius"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintRight_toLeftOf="@+id/ll_save_main_share">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_share" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分享" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_save_and_share"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_share_main_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_white_with_window_bg_selector_with_big_radius"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_share" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分享" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_save_main_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_green_with_window_bg_selector_with_radius"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintRight_toLeftOf="@+id/ll_share_main_save">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_save" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

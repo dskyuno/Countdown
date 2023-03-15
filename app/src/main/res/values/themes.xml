@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BaseProjectArch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#2196F3</item>
+        <!--  <item name="colorPrimaryDark">#c2c2c2</item>-->
+        <item name="colorPrimaryVariant">#C2C2C2</item>
+        <item name="colorOnPrimary">#707070</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">#A0A0A0</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/window_bg</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="md_color_button_text">@color/color_dialog_button_text</item>
+        <!-- <item name="md_color_hint">#000000</item>
+         <item name="md_color_button_text">#00ceff</item>-->
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="ThemeBottomNav">
+
+    </style>
+
+    <style name="bottomNavigationViewActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <!-- <item name="android:textSize">2sp</item>-->
+    </style>
+
+    <style name="tabLayout.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="minToolbarTitle" parent="@style/Base.TextAppearance.AppCompat.Title">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="MyEditTextTheme">
+        <item name="colorControlNormal">#A0A0A0</item>
+        <item name="colorControlActivated">#00ceff</item>
+        <item name="colorControlHighlight">#FFFFFF</item>
+    </style>
+
+    <style name="dialogTheme">
+        <item name="colorPrimary">#2196F3</item>
+    </style>
+</resources>

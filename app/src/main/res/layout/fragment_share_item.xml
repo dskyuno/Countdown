@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_view"
+        android:src="@drawable/ic_baseline_save"
+        android:layout_width="350dp"
+        android:layout_height="350dp"/>
+    <TextView
+        android:background="#FFCC00"
+        android:text="登录"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+
+</LinearLayout>

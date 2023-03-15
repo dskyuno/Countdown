@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp">
+        <androidx.cardview.widget.CardView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp">
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_text_typeface_item"
+                android:gravity="center"
+                android:text="23"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--theme-->
+    <color name="window_bg">#F7F7F7</color>
+    <!--custom-->
+    <color name="tab_active">#FFFF63</color>
+    <color name="tab_inactive">#B5B5B5</color>
+    <color name="countdown_create_icon_gray">#A0A0A0</color>
+    <color name="countdown_type_general">#C7FFF1</color>
+    <!-- <color name="countdown_type_urgency">#1BB7CE</color>-->
+    <color name="countdown_type_urgency">#FFCC00</color>
+
+    <color name="countdown_item_color_is_now">#caf0eb</color>
+    <color name="countdown_item_color_is_now_add_alpha">#b3caf0eb</color>
+    <color name="countdown_item_color_is_now_detail">#bae0fa</color>
+    <!--  <color name="countdown_item_color_have_interval">#F4F9FD</color>-->
+    <color name="countdown_item_color_have_interval">#DCEDF7</color>
+    <color name="countdown_item_color_have_interval_add_alpha">#b3DCEDF7</color>
+    <color name="countdown_item_color_have_interval_detail">#dcedf7</color>
+    <color name="countdown_item_color_already">#f8e8c0</color>
+    <color name="countdown_item_color_already_add_alpha">#b3f8e8c0</color>
+    <color name="countdown_item_color_already_detail">#f8e0b0</color>
+    <color name="interval_day">#b9d7f9</color>
+    <color name="interval_hour">#e0f3f1</color>
+
+    <color name="default_countdown_theme_bottom">#F7F7F7</color>
+
+
+    <!--  Theme  index start -->
+    <color name="countdown_theme_top_0">@color/countdown_item_color_already</color>
+    <color name="countdown_theme_center_0">@color/countdown_item_color_is_now</color>
+    <color name="countdown_theme_bottom_0">@color/countdown_item_color_have_interval</color>
+
+    <color name="countdown_theme_top_1">@color/countdown_item_color_already_add_alpha</color>
+    <color name="countdown_theme_center_1">@color/countdown_item_color_already</color>
+    <color name="countdown_theme_bottom_1">@color/default_countdown_theme_bottom</color>
+
+    <color name="countdown_theme_top_2">@color/countdown_item_color_is_now_add_alpha</color>
+    <color name="countdown_theme_center_2">@color/countdown_item_color_is_now</color>
+    <color name="countdown_theme_bottom_2">@color/default_countdown_theme_bottom</color>
+
+    <color name="countdown_theme_top_3">@color/countdown_item_color_have_interval_add_alpha</color>
+    <color name="countdown_theme_center_3">@color/countdown_item_color_have_interval</color>
+    <color name="countdown_theme_bottom_3">@color/default_countdown_theme_bottom</color>
+
+    <color name="countdown_theme_top_4">#b341e6f2</color>
+    <color name="countdown_theme_center_4">#41e6f2</color>
+    <color name="countdown_theme_bottom_4">@color/default_countdown_theme_bottom</color>
+
+    <color name="countdown_theme_top_5">#b300aeff</color>
+    <color name="countdown_theme_center_5">#00aeff</color>
+    <color name="countdown_theme_bottom_5">@color/default_countdown_theme_bottom</color>
+    <!--浅绿-->
+    <color name="countdown_theme_top_6">#b3b1ff7d</color>
+    <color name="countdown_theme_center_6">#b1ff7d</color>
+    <color name="countdown_theme_bottom_6">@color/default_countdown_theme_bottom</color>
+    <!--绿色-->
+    <color name="countdown_theme_top_7">#b300e874</color>
+    <color name="countdown_theme_center_7">#00e874</color>
+    <color name="countdown_theme_bottom_7">@color/default_countdown_theme_bottom</color>
+    <!--黄色-->
+    <color name="countdown_theme_top_8">#b3fbff7d</color>
+    <color name="countdown_theme_center_8">#fbff7d</color>
+    <color name="countdown_theme_bottom_8">@color/default_countdown_theme_bottom</color>
+
+    <!--橙色-->
+    <color name="countdown_theme_top_9">#b3ffb521</color>
+    <color name="countdown_theme_center_9">#ffb521</color>
+    <color name="countdown_theme_bottom_9">@color/default_countdown_theme_bottom</color>
+    <!--紫色-->
+    <color name="countdown_theme_top_10">#b3ff75ea</color>
+    <color name="countdown_theme_center_10">#ff75ea</color>
+    <color name="countdown_theme_bottom_10">@color/default_countdown_theme_bottom</color>
+
+    <!--轻松-->
+    <color name="countdown_theme_top_11">#b3e8d9ba</color>
+    <color name="countdown_theme_center_11">#e8d9ba</color>
+    <color name="countdown_theme_bottom_11">@color/default_countdown_theme_bottom</color>
+
+    <!--淡雅-->
+
+    <color name="countdown_theme_top_12">#b3f0efda</color>
+    <color name="countdown_theme_center_12">#f0efda</color>
+    <color name="countdown_theme_bottom_12">@color/default_countdown_theme_bottom</color>
+    <color name="ss">#ccb9bc</color>
+    <!--还有颜色 detail-->
+    <!--dcedf7-->
+    <!--F4F9FD-->
+    <!--已经颜色 detail-->
+    <!--f8e0b0-->
+    <!--f8e8c0-->
+    <!--other-->
+    <color name="color_dialog_button_text">#00ceff</color>
+</resources>
